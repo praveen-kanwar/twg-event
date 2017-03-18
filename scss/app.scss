@@ -1,0 +1,609 @@
+// Colors.
+$indigo-500: #3F51B5;
+$indigo-400: #5C6BC0;
+$indigo-900: #1A237E;
+
+$grey-50: #fafafa;
+$grey-100: #f5f5f5;
+$grey-200: #eeeeee;
+$grey-300: #e0e0e0;
+$grey-400: #bdbdbd;
+$grey-700: #616161;
+$grey-800: #424242;
+$grey-900: #212121;
+
+$red-500: #F44336;
+$red-800: #C62828;
+$red-900: #B71C1C;
+
+$teal-500: #009688;
+$teal-600: #00897B;
+$teal-800: #00695C;
+$teal-700: #00796B;
+
+$deep-orange-900: #BF360C;
+
+// Util classes.
+.bobon-util__full-width {
+  width: 100%;
+}
+
+.bobon-util__half-width {
+  width: 50%;
+  float: left;
+}
+
+.bobon-radio {
+  margin-right: 25px;
+}
+
+.mdl-card {
+  background: none;
+  background: $grey-50;
+  border: 1px solid $grey-300;
+}
+
+.mdl-card__supporting-text {
+  color: $grey-900;
+}
+
+.mdl-card__title {
+  background: #009688;
+  color: $grey-100;
+}
+
+.mdl-card {
+  .mdl-card {
+    margin: 0px;
+  }
+}
+
+.mdl-card {
+  min-height: 100px;
+}
+
+.mdl-cell {
+  min-height: 0;
+}
+
+.material-icons {
+  margin-right: 10px;
+}
+
+// Layout.
+body {
+  background: $grey-200;
+  color: $grey-700;
+  min-height: 100%;
+}
+
+plaintext {
+  white-space: pre-wrap;
+  font-family: 'Roboto', 'Helvetica', "Arial";
+}
+
+.bobon-logo {
+  color: #fff;
+  font-weight: 200;
+  width: 60px;
+  font-size: 18px;
+}
+
+.bobon-user-avatar {
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-sizing: border-box;
+  line-height: 50px !important;
+  padding: 0px !important;
+  text-align: center;
+  position: relative;
+  margin-left: 10px;
+
+  &:focus {
+    outline: none;
+  }
+
+  img {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+  }
+
+  .material-icons {
+    font-size: 50px;
+    margin: 0px;
+  }
+}
+
+.bobon-menu-user-menu {
+  background: $teal-600;
+
+  li {
+    color: $grey-100;
+
+    &:hover {
+      background: $teal-500;
+    }
+  }
+}
+
+.bobon-unit-switcher-menu {
+  button {
+    color: $grey-100;
+    background: $teal-600;
+    border-radius: 18px;
+
+    &:hover {
+      background: $teal-800;
+    }
+  }
+
+  .mdl-menu {
+    background: $teal-600;
+
+    .mdl-menu__item {
+      color: $grey-100;
+      &:hover {
+        background: $teal-500;
+      }
+    }
+  }
+
+}
+
+.bobon-page-content {
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.bobon-textfield-wrapper {
+  padding: 0 10px;
+  box-sizing: border-box;
+  float: left;
+
+  > .mdl-textfield {
+    width: 100%;
+  }
+}
+
+.bobon-main-content {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.bobon-text-with-icon {
+  position: relative;
+  padding-left: 30px;
+
+  .material-icons {
+    position: absolute;
+    top: 50%;
+    margin-top: -12px;
+    left: 0px;
+  }
+}
+
+.bobon-roast-temp-form {
+  width: 100%;
+  position: relative;
+  box-sizing: content-box;
+  padding-right: 240px;
+
+  input[type="submit"] {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 50px;
+    line-height: 50px;
+    width: 200px;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 0;
+  }
+}
+
+.bobon-roast-temp-input {
+  width: 100%;
+  border: none;
+  box-shadow: none;
+  border-bottom: 1px solid #e3e3e3;
+  font-size: 3em;
+  padding: 0;
+  display: block;
+  height: 50px;
+  line-height: 50px;
+  &:focus {
+    outline-width: 0;
+  }
+}
+
+@keyframes hot {
+  0%   {
+    color: #B71C1C;
+  }
+  25%  {
+    color: #E64A19;
+  }
+  50%  {
+    color: #FFEE58;
+  }
+  100% {
+    color: #E64A19;
+  }
+}
+
+.bobon-roast-status--roast_pending {
+  color: #FF6F00;
+}
+
+
+.bobon-roast-status--roast_in_progress {
+  color: #B71C1C;
+  min-width: 1px;
+  width: 38px;
+  padding: 0px;
+  text-align: center;
+
+  .material-icons {
+    margin: 0px;
+    animation: hot 1s ease-out infinite;
+  }
+}
+
+.bobon-roast-status--roast_completed {
+  color: #43A047;
+}
+
+header {
+  .mdl-button {
+    &.mdl-button--colored  {
+      &.bobon-roast-status--roast_in_progress {
+        border-radius: 18px;
+        color: #fff;
+        background: $teal-600;
+        margin-right: 15px;
+
+        &:hover {
+          background: $teal-800;
+        }
+      }
+    }
+  }
+}
+
+.bobon-section {
+  width: 100%;
+  clear: both;
+
+  &.bobon-section-colored {
+    background: rgb(33, 150, 243);
+    color: #ebebeb;
+  }
+}
+
+.bobon-chart-title {
+  font-size: 1.2em;
+  padding: 7px 0;
+  color: $indigo-900;
+  text-transform: uppercase;
+}
+
+.bobon-stopwatch {
+  height: 50px;
+  position: relative;
+  padding-left: 130px;
+}
+
+.bobon-stopwatch-time {
+  font-size: 3em;
+  line-height: 50px;
+  height: 50px;
+}
+
+.bobon-stopwatch-button {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  line-height: 50px;
+  text-align: center;
+  background: $deep-orange-900 !important;
+  color: $grey-100 !important;
+}
+
+.bobon-header-button {
+  position: fixed;
+  top: 35px;
+  z-index: 99;
+}
+
+.bobon-header-button-add-new {
+  left: 16px;
+}
+
+.mdl-layout__content {
+  padding-top: 20px;
+}
+
+.bobon-dialog {
+  width: 400px;
+  border: 0;
+  z-index: 9999;
+  overflow: visible;
+  display: inline-block;
+}
+
+.bobon-dialog-container {
+  display: table;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: 9999;
+
+  &:before {
+    content: "";
+    display: block;
+    background: rgba(0,0,0,0.7);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+  }
+}
+
+.bobon-dialog-cell {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+
+  .mdl-card {
+    text-align: left;
+  }
+
+  .mdl-card__title {
+    font-size: 1.5em;
+    font-weight: 200;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+.bobon-spinner {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -25px;
+  margin-left: -25px;
+}
+
+.bobon-transition-enter {
+  transform: translateY(30px);
+  opacity: 0.01;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+
+  &.bobon-transition-enter-active {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.bobon-transition-leave {
+  display: none;
+
+  &.bobon-transition-leave-active {
+    opacity: 0;
+  }
+
+}
+
+.bobon-transition-appear {
+  transform: translateY(30px);
+  opacity: 0.01;
+
+  &.bobon-transition-appear-active {
+    transform: translateY(0);
+    opacity: 1;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+}
+
+.bobon-header-appear {
+  transform: translateY(-30px);
+  opacity: 0.01;
+
+  &.bobon-header-appear-active {
+    transform: translateY(0);
+    opacity: 1;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+}
+
+
+.bobon-table-cell--beans-name {
+  white-space: normal;
+  min-width: 150px;
+}
+
+.bobon-roast-profile-sidebar {
+  padding-left: 0px;
+  padding-right: 0px;
+
+  > .mdl-cell {
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+
+.mdl-grid {
+  align-items: flex-start;
+}
+
+.bobon-login-form {
+  position: fixed;
+  width: 300px;
+  left: 50%;
+  margin-left: -150px;
+  top: 50%;
+  margin-top: -145px;
+  border: 0;
+}
+
+.bobon-anon {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: #009688;
+}
+
+
+.bobon-instructions {
+  text-align: center;
+  padding: 0px;
+
+  .mdl-cell {
+    position: relative;
+    padding-top: 180px;
+    padding-bottom: 20px;
+
+    img {
+      max-width: 100%;
+    }
+
+    .mdl-typography--font-thin {
+      position: absolute;
+      top: 20px;
+      left: 0px;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 0 25px;
+      margin-bottom: 40px;
+      color: #fff;
+    }
+  }
+}
+
+.bobon-home-anonymous {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+
+  canvas {
+    position: fixed;
+    bottom: 0px;
+    left: 50%;
+    margin-left: -1200px;
+  }
+
+  .bobon-instructions {
+    position: fixed;
+    width: 100%;
+    bottom: 80px;
+    color: #fff;
+  }
+}
+
+.bobon-footer {
+  padding: 10px 20px;
+  background: $teal-500;
+  color: #fff;
+  font-weight: 200;
+  font-size: 0.9em;
+  text-align: right;
+  bottom: 0px;
+  box-sizing: border-box;
+  min-height: 40px;
+
+  a {
+    font-weight: 200;
+    color: #fff;
+  }
+}
+
+.bobon-form__new-roast {
+  width: 100%;
+  margin: 0;
+  padding: 10px;
+  box-sizing: border-box;
+  float: left;
+}
+
+.bobon-list__compare-select {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+@media screen and (max-width: 1024px) {
+  .mdl-layout__header {
+    display: flex;
+  }
+
+  .mdl-layout {
+    > span {
+      z-index: 9999;
+    }
+  }
+
+  .mdl-button-nav-start-roast {
+    display: none;
+  }
+
+  .bobon-button-text--nav-action {
+    display: none;
+  }
+
+  .bobon-util__half-width {
+    width: 100% !important;
+  }
+
+  .bobon-header-button {
+    top: 25px;
+  }
+
+  header {
+    .mdl-navigation {
+      .mdl-button {
+        padding: 0 10px;
+        min-width: 10px;
+
+        .material-icons {
+          margin-right: 0px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 839px) {
+  .mdl-grid {
+    padding: 8px 0;
+  }
+
+  .bobon-table-cell--hidden-mobile {
+    display: none;
+  }
+
+  .bobon-instructions {
+    .mdl-cell {
+      padding-top: 10px;
+
+      .mdl-typography--font-thin {
+        position: relative;
+      }
+    }
+  }
+}

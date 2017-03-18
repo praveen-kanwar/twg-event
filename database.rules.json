@@ -1,0 +1,26 @@
+{
+  "rules":
+    {
+     "events":
+       {
+         "$uid":
+           {
+             ".write": "auth !== null",
+             ".read": "$uid === auth.uid",
+             "$event":
+               {
+                 ".read": "data.child('uid').val() === auth.uid",
+                 ".write": "data.child('uid').val() === auth.uid"
+               }
+           }
+       },
+     "settings":
+       {
+         "$uid":
+           {
+             ".write": "$uid === auth.uid",
+             ".read": "$uid === auth.uid"
+           }
+       }
+   }
+}
