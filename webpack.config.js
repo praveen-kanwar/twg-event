@@ -30,12 +30,18 @@ module.exports = {
                 include: path.resolve(__dirname, 'images')
             },
             {
-                test: /\.scss$/,
+                test: /\.(scss|css)$/,
                 loaders: [
                     'style',
                     'css?sourceMap&-restructuring&aggressiveMerging',
                     'autoprefixer',
                     'sass?sourceMap'
+                ]
+            },
+            {
+                test: /\.(json)$/,
+                loaders: [
+                    'json-loader'
                 ]
             }
         ]

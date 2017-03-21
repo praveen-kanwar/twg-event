@@ -63,7 +63,7 @@ class App extends React.Component {
 
                     <footer className="twg-footer">
                         © TWG Events 2017. Support:
-                        <a href="mailto:mbambra@theworkinggroup.ca">mbambra@theworkinggroup.ca</a>.
+                        <a href="mailto:mbambra@theworkinggroup.ca">mbambra@theworkinggroup.ca</a>
                     </footer>
 
                     <DialogContainer/>

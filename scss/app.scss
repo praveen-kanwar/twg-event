@@ -23,6 +23,21 @@ $teal-700: #00796B;
 
 $deep-orange-900: #BF360C;
 
+.App-calendar {
+  font-size: 15px;
+  padding: 30px 30px;
+  max-width: 1800px;
+  width: 98%;
+  height: 100vh;
+  margin: auto;
+  flex: 2;
+
+  .rbc-event {
+    background-color: #34B466 !important;
+  }
+
+}
+
 // Util classes.
 .twg-util__full-width {
   width: 100%;
@@ -457,6 +472,8 @@ header {
     color: #fff;
   }
 }
+
+.mui-ripple-circle {display: none}
 
 .twg-footer {
   padding: 10px 20px;

@@ -75,20 +75,22 @@ const C = {
   LOADING_DATA: 'LOADING_DATA',
   LOADED_DATA: 'LOADED_DATA',
 
-  // Google analytics
-  GOOGLE_ANALYTICS_CODE: 'UA-79419231-1',
+};
 
-  // Settings actions.
-  UPDATE_SETTING: 'UPDATE_SETTING',
-  FETCHED_SETTINGS: 'FETCHED_SETTINGS',
+export const BOARDROOM = {
+  FIVE_ONE: 1,
+  FIVE_TWO: 2,
+  THREE_ONE: 3,
+  THREE_TWO: 4,
+  THREE_THREE: 5,
+};
 
-  // Settings.
-  METRIC: 'METRIC',
-  IMPERIAL: 'IMPERIAL',
-  METRIC_TEMP_SYMBOL: '°C',
-  METRIC_WEIGHT_SYMBOL: 'kg',
-  IMPERIAL_TEMP_SYMBOL: '°F',
-  IMPERIAL_WEIGHT_SYMBOL: 'lbs'
+export const BOARDROOM_NAME = {
+  FIVE_ONE: "Boardroom 5-1",
+  FIVE_TWO: "Boardroom 5-2",
+  THREE_ONE: "Boardroom 3-1",
+  THREE_TWO: "Boardroom 3-2",
+  THREE_THREE: "Boardroom 3-3",
 };
 
 export default C;

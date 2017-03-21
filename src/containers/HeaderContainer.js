@@ -7,6 +7,7 @@ import C from '../config/constants';
 
 const mapStateToProps = (state, ownProps) => {
   return {
+    location: ownProps.location,
     authStatus: state.auth.authStatus,
     photoURL: state.auth.photoURL,
     userName: state.auth.userName,

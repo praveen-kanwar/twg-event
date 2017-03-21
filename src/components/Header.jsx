@@ -187,6 +187,9 @@ class Header extends React.Component {
             <ReactCSSTransitionGroup transitionName="twg-header" transitionEnterTimeout={500} transitionLeaveTimeout={500} transitionAppear={true}>
                 <header className="mdl-layout__header">
                     <div className="mdl-layout__header-row">
+                        <h4>
+                          TWG Lunch n' Learn
+                        </h4>
                         <span className="mdl-layout-title"></span>
                         <div className="mdl-layout-spacer"></div>
                         <nav className="mdl-navigation">

@@ -16,7 +16,7 @@ class NewEvent extends React.Component {
 
                     <CardTitle>
                         <div className="twg-text-with-icon">
-                            <i className="material-icons">event</i>
+                            <i className="material-icons">add</i>
                             Create New Event.
                         </div>
                     </CardTitle>
